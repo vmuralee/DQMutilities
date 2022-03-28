@@ -1,5 +1,5 @@
 # DQMutilities
 
 ```
-git clone 
+git clone https://github.com/vmuralee/DQMutilities.git
 ```
