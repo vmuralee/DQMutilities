@@ -5,13 +5,15 @@ from optparse import OptionParser
 
 parser=OptionParser()
 parser.add_option("-p","--path",dest="Path",type="str",default="di-tau",help="HLT path")
+parser.add_option("-v","--validation",action="store_false", dest="verbose", default=True,help="use the validation")
 
 opts, args = parser.parse_args()
 
 rootfiles = str(args[0]).split(',')
 
-
-dir_relval = "DQMData/Run 1/HLT/Run summary/TAU/RelVal/MC/"
+dir_relval = "DQMData/Run 1/HLT/Run summary/TAU/PFTaus/"
+if opts.verbose:
+  dir_relval = "DQMData/Run 1/HLT/Run summary/TAU/RelVal/MC/"
 
 physics_path = {
                 "di-tau":[
